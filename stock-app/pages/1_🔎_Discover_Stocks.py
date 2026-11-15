@@ -4,7 +4,9 @@ from modules.search import search_web, result_search_queries
 from modules.stock_data import run_screen
 from modules.universe import STARTER_SYMBOLS
 from modules.ui import render_sidebar
-
+if "result_search" not in st.session_state:
+    st.session_state.result_search = []
+    
 st.set_page_config(page_title="Discover Stocks", page_icon="🔎", layout="wide")
 st.title("🔎 Discover Indian Stocks")
 render_sidebar()
