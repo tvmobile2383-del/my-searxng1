@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from modules.ui import render_sidebar
 if "selected_stocks" not in st.session_state:
-    st.session_state.selected_stocks = []
+    st.session_state.selected_stocks = {}
 
 selected = st.session_state.selected_stocks
 
